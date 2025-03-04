@@ -12,7 +12,7 @@ jobs:
       with:
         version: 10
     
-    - name: build with pnpm
+    - name: build with pnpm 
       run: pnpm install
 
     - name: Mend CLI Scan
@@ -21,8 +21,6 @@ jobs:
         MEND_USER_KEY: ${{secrets.MEND_SANDBOX_USER_KEY}}
         MEND_URL: https://saas.mend.io
       run: |
-        echo Mend email: $MEND_EMAIL
-        echo Mend userkey: $MEND_USER_KEY
         echo Downloading Mend CLI
         curl https://downloads.mend.io/cli/windows_amd64/mend.exe -o mend.exe
         echo run Mend dependencies scan
