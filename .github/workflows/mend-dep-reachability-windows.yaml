@@ -13,9 +13,7 @@ jobs:
         version: 10
     
     - name: build with pnpm
-      run: p
-npm install
-
+      run: pnpm install
 
     - name: Mend CLI Scan
       env:
